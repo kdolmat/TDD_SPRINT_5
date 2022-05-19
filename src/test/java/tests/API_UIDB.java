@@ -35,7 +35,7 @@ static {
     //mvn verify -Dcucumber.options="--tags@api" //CUCUMBER
     //OR mvn verify
 
-    @Test
+    @Test(groups="smoke")
     public void verifications(){
 
       given().
@@ -61,7 +61,7 @@ static {
 
 
 //    @Test(groups = {"smoke"})
-    @Test
+    @Test(groups="smoke")
     @BeforeClass
     public void grabApiKey() throws IOException {
 
@@ -110,7 +110,7 @@ static {
 
 
 
-    @Test
+    @Test(groups="regression")
     public void APItoUIincDBacctCreationUsingPOJO(){
     Faker faker = new Faker();
     String Fname = faker.name().firstName();
@@ -155,7 +155,7 @@ static {
         DBUtility.close();
 }
 
-    @Test
+    @Test(groups="regression")
     public void UItoAPIacctCreation(){
         Faker faker = new Faker();
         String Fname = faker.name().firstName();

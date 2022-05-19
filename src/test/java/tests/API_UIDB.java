@@ -32,7 +32,7 @@ static {
 
 
     //mvn test -DxmlFile=regression.xml // TDD(TESTNG)
-    //mvn test -Dcucumber.options="--tags@api" //CUCUMBER
+    //mvn verify -Dcucumber.options="--tags@api" //CUCUMBER
     //OR mvn verify
 
     @Test

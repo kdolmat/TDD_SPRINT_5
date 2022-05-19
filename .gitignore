@@ -1,2 +1,8 @@
-# Project exclude paths
+.DS_Store
+*.iml
+*.png
+/.idea/
+/out/
 /target/
+/bin/
+/test-output/

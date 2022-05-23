@@ -87,6 +87,21 @@ public class Zuhra_API_Duobank {
 
 
 
+    @Test
+    public  void basiAuth(){
+      given().
+//              auth().
+//              basic("postman", "password").
+                header("Authorization","Basic cG9zdG1hbjpwYXNzd29yZA=="). //we can make enter here dynamic as well
+                when().log().all().
+                get("https://postman-echo.com/basic-auth").
+                then().log().all().
+                statusCode(200).
+                body("authenticated", equalTo(true));
+
+    }
+
+
 
     //Verify basic performance sanity testing .
 
